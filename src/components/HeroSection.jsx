@@ -1,6 +1,6 @@
 export const HeroSection = () => {
   return (
-    <section className="relative h-[320px] w-full bg-cover bg-center bg-no-repeat bg-[url(/img/hero_x1.jpg)]">
+    <section className="relative h-[320px] w-full bg-cover bg-center bg-no-repeat bg-[url(/img/footer2_x1.jpg)]">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-20 z-0"></div>
 
@@ -24,7 +24,7 @@ export const HeroSection = () => {
       </header>
 
       {/* Hero Text */}
-      <div className="relative z-10 flex flex-col items-center h-[260px] text-center justify-center px-4">
+      <div className="relative z-10 flex flex-col items-center h-[240px] text-center justify-center px-4">
         <h2 className="text-white text-4xl md:text-6xl font-bold">
           Coffee Events
         </h2>
