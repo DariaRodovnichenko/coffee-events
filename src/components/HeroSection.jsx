@@ -1,4 +1,8 @@
+import { FaBars } from "react-icons/fa";
+import { useState } from "react";
+
 export const HeroSection = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <section className="relative h-[400px] w-full bg-cover bg-center bg-no-repeat bg-[url(/img/footer2_x2.jpg)]">
       {/* Overlay */}
@@ -6,10 +10,10 @@ export const HeroSection = () => {
 
       {/* Header/Navbar */}
       <header className="relative z-10 px-10 py-4 flex justify-between items-center">
-        <h1 className="text-white font-medium text-lg">
-          Conscious Coffee
-        </h1>
-        <nav>
+        <h1 className="text-white font-medium text-lg">Conscious Coffee</h1>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:block">
           <ul className="flex gap-6 text-white font-medium text-lg">
             <li>
               <a href="#workshops" className="hover:underline">
@@ -23,7 +27,33 @@ export const HeroSection = () => {
             </li>
           </ul>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <FaBars />
+        </button>
       </header>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <nav className="md:hidden absolute top-full left-0 w-full bg-green-900 z-20">
+          <ul className="flex flex-col items-center py-4 text-white font-medium text-lg gap-4">
+            <li>
+              <a href="#workshops" onClick={() => setIsMenuOpen(false)}>
+                Workshops
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      )}
 
       {/* Hero Text */}
       <div className="relative z-10 flex flex-col items-center h-[320px] text-center justify-center px-4">
