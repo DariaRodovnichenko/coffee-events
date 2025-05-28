@@ -4,7 +4,7 @@ import { useState } from "react";
 export const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <section className="relative h-[400px] w-full bg-cover bg-center bg-no-repeat bg-[url(/img/footer2_x2.jpg)]">
+    <section className="relative h-[400px] w-full bg-hero bg-cover bg-center bg-no-repeat hero-bg">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-20 z-0"></div>
 
